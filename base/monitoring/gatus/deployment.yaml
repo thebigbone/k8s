@@ -57,8 +57,13 @@ spec:
             add:
               - "NET_BIND_SERVICE"
               - "SYS_TIME"
-        volumeMounts: []
-      volumes: []
+          volumeMounts:
+            - mountPath: /config
+              name: gatus-config
+      volumes:
+        - name: gatus-config
+          configMap:
+            name: gatus
       securityContext:
         runAsNonRoot: true
         seccompProfile:
