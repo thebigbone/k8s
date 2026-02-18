@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: gatus
 data:
-  config.ini: |
+  config.yaml: |
     metrics: true
     endpoints:
       - name: git
