@@ -7,8 +7,8 @@ resources:
   - deployment.yaml
   - service.yaml
   - config.yaml
-  - namespace.yaml
   - sa.yaml
+  - namespace.yaml
 
 commonLabels:
   app.kubernetes.io/name: gatus
