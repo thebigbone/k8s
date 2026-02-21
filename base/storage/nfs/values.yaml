@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nfs-values
+  namespace: kube-system
+data:
+  values.yaml: |
+  controller:
+    resources:
+      csiProvisioner:
+        limits:
+          memory: 500Mi
+        requests:
+          cpu: 10m
+          memory: 30Mi
+      csiResizer:
+        limits:
+          memory: 500Mi
+        requests:
+          cpu: 10m
+          memory: 30Mi
+      csiSnapshotter:
+        limits:
+          memory: 500Mi
+        requests:
+          cpu: 10m
+          memory: 30Mi
+      livenessProbe:
+        limits:
+          memory: 200Mi
+        requests:
+          cpu: 10m
+          memory: 30Mi
+      nfs:
+        limits:
+          memory: 200Mi
+        requests:
+          cpu: 10m
+          memory: 30Mi

@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/component: gatus
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/component: gatus

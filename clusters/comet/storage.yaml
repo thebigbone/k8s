@@ -1,8 +1,8 @@
-# =============== point to base/network ===============
+# =============== point to base/storage ===============
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: network
+  name: storage
   namespace: flux-system
 spec:
   interval: 1h
@@ -11,6 +11,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./base/network
+  path: ./base/storage
   prune: true
   wait: true
