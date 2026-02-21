@@ -16,7 +16,36 @@ spec:
         name: flux-system
         namespace: flux-system
   interval: 5m
-  valuesFrom:
-    - kind: ConfigMap
-      name: nfs-values
-      valuesKey: values.yaml
+  values:
+    controller:
+      resources:
+        csiProvisioner:
+          limits:
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        csiResizer:
+          limits:
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        csiSnapshotter:
+          limits:
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        livenessProbe:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        nfs:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
