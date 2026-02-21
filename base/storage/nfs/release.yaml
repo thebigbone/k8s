@@ -15,6 +15,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: csi-driver-nfs
+        namespace: kube-system
   interval: 5m
   install:
     remediation:
