@@ -25,6 +25,8 @@ spec:
       retries: 3
   values:
     controller:
+      nodeSelector:
+        kubernetes.io/hostname: k3s-01
       resources:
         csiProvisioner:
           limits:
