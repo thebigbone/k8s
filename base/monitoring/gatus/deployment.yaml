@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/component: gatus
 spec:
-  runtimeClass: gvisor
+  runtimeClassName: gvisor
   replicas: 1
   selector:
     matchLabels:
